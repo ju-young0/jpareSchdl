@@ -7,6 +7,8 @@ import org.example.jpareschdl.dto.LoginRequestDto;
 import org.example.jpareschdl.dto.UserResponseDto;
 import org.example.jpareschdl.dto.UserSignUpResponseDto;
 import org.example.jpareschdl.entity.User;
+import org.example.jpareschdl.exception.CustomException;
+import org.example.jpareschdl.exception.ErrorCode;
 import org.example.jpareschdl.repository.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -39,7 +41,7 @@ public class UserService {
 
         // 요청한 id 값이 없다면
         if (optionalUser.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.NO_CONTENT, "Does not exist id : " + id);
+            throw new CustomException(ErrorCode.USER_NOT_FOUND, id);
         }
 
         // 요청한 id 값이 있다면

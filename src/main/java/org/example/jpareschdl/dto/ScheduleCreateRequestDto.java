@@ -2,9 +2,11 @@ package org.example.jpareschdl.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
+@AllArgsConstructor
 public class ScheduleCreateRequestDto {
 
     @NotBlank
@@ -14,10 +16,5 @@ public class ScheduleCreateRequestDto {
     @NotBlank
     private final String contents;
 
-    public ScheduleCreateRequestDto( String title, String contents) {
-
-        this.title = title;
-        this.contents = contents;
-    }
 
 }
