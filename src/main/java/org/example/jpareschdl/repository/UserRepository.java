@@ -4,8 +4,6 @@ import org.example.jpareschdl.entity.User;
 import org.example.jpareschdl.exception.CustomException;
 import org.example.jpareschdl.exception.ErrorCode;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.server.ResponseStatusException;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 

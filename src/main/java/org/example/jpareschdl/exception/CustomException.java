@@ -1,6 +1,5 @@
 package org.example.jpareschdl.exception;
 
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
